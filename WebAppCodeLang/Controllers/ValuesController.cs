@@ -11,27 +11,27 @@ namespace WebAppCodeLang.Controllers
     public class ValuesController : ControllerBase
     {
         // GET api/values
-        [HttpGet]
+        [HttpGet]           //Get all
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "C#", "C++", "Python", "Basic", "VB", "Java" };
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [HttpGet("{id}")]   //Get one
         public ActionResult<string> Get(int id)
         {
             return "value";
         }
 
         // POST api/values
-        [HttpPost]
+        [HttpPost]          //Create
         public void Post([FromBody] string value)
         {
         }
 
         // PUT api/values/5
-        [HttpPut("{id}")]
+        [HttpPut("{id}")]   //Edit  Put = många fält/props //Patch = ett fält/prop
         public void Put(int id, [FromBody] string value)
         {
         }
